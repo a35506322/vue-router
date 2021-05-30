@@ -1,3 +1,35 @@
 <template>
-    <div>新增頁面</div>
+  <div class="row">
+    <div class="col-4">
+        <div class="list-group">
+            <router-link class="list-group-item list-group-item-action" data-value="A"
+            v-on:click="changeStatus" v-bind:class="{'active':link==='A'}" to="/newPage/componentA"> 元件A </router-link>
+            <router-link class="list-group-item list-group-item-action" data-value="B"
+            v-on:click="changeStatus" v-bind:class="{'active':link==='B'}" to="/newPage/componentB"> 元件B </router-link>
+        </div>
+    </div>
+    <div class="col-8">
+        <router-view></router-view>
+    </div>
+  </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      link: ''
+    }
+  },
+  methods: {
+    changeStatus (e) {
+      const link = e.target.dataset.value
+      this.link = link
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>

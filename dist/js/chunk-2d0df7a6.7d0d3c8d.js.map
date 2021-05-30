@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/views/ComponentA.vue"],"names":["script","render"],"mappings":"wJACA,MAAMA,EAAS,GACfA,EAAOC,OAASA,EAED","file":"js/chunk-2d0df7a6.7d0d3c8d.js","sourcesContent":["import { render } from \"./ComponentA.vue?vue&type=template&id=3c0ba0f9\"\nconst script = {}\nscript.render = render\n\nexport default script"],"sourceRoot":""}
