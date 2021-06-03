@@ -40,6 +40,7 @@ const routes = [
           {
             path: 'c2a',
             components: {
+              // left和right是命名
               left: () => import('../views/ComponentC.vue'),
               right: () => import('../views/ComponentA.vue')
             }
