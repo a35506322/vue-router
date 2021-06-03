@@ -38,6 +38,17 @@ const routes = [
         component: () => import('../views/DynamicRouter.vue')
       },
       {
+        path: 'dynamicRouterByProps/:id',
+        name: '動態路徑',
+        component: () => import('../views/DynamicRouterByProps.vue'),
+        props: (route) => {
+          console.log('route', route)
+          return {
+            id: route.params.id
+          }
+        }
+      },
+      {
         path: 'namedView',
         name: '命名視圖',
         component: () => import('../views/NamedView.vue'),
