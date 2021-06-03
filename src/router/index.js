@@ -33,6 +33,11 @@ const routes = [
         component: () => import('../views/ComponentB.vue')
       },
       {
+        path: 'dynamicRouter/:id',
+        name: '動態路徑',
+        component: () => import('../views/DynamicRouter.vue')
+      },
+      {
         path: 'namedView',
         name: '命名視圖',
         component: () => import('../views/NamedView.vue'),
