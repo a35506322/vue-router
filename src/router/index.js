@@ -31,6 +31,27 @@ const routes = [
         path: 'componentB',
         name: '元件 B',
         component: () => import('../views/ComponentB.vue')
+      },
+      {
+        path: 'namedView',
+        name: '命名視圖',
+        component: () => import('../views/NamedView.vue'),
+        children: [
+          {
+            path: 'c2a',
+            components: {
+              left: () => import('../views/ComponentC.vue'),
+              right: () => import('../views/ComponentA.vue')
+            }
+          },
+          {
+            path: 'a2b',
+            components: {
+              left: () => import('../views/ComponentA.vue'),
+              right: () => import('../views/ComponentB.vue')
+            }
+          }
+        ]
       }
     ]
   }
