@@ -91,9 +91,23 @@ const routes = [
   }
 ]
 
+// Router Option
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
+  // 當網址連結到此class時候，可以套用樣式
+  linkActiveClass: 'active',
+  // 設定滾輪
+  scrollBehavior (to, from, savePosition) {
+    console.log(to, from, savePosition)
+    // savePosition 重新整理當前滾動位置
+    if (to.fullPath.match('newPage')) {
+      // 滾輪的參數設定
+      return {
+        top: 0
+      }
+    }
+  }
 })
 
 // 輸出給其他頁面載入

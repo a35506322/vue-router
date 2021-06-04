@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fiexd-top" id="nav">
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -16,9 +16,10 @@
       </div>
     </div>
   </nav>
-  <div class="container">
+  <div class="container" style="height: 300vh">
       <router-view></router-view>
   </div>
+  <router-link to="/newPage/routerNavigation">GO routerNavigation</router-link>
 </template>
 
 <style lang="scss">
