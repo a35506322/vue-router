@@ -1,5 +1,6 @@
 <template>
-    <div>DynamicRouter</div>
+    <div>DynamicRouterByProps</div>
+    <p ref="myP"></p>
 </template>
 
 <script>
@@ -10,7 +11,7 @@ export default {
   created () {
     // 可以透過index.js傳進來
     const seed = this.id
-    axios.get(`https://randomuser.me/api/?seed=${seed}`).then((res) => { console.log(res) })
+    axios.get(`https://randomuser.me/api/?seed=${seed}`).then((res) => { this.$refs.myP.innerText = JSON.stringify(res) })
   }
 }
 </script>

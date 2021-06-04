@@ -34,12 +34,12 @@ const routes = [
       },
       {
         path: 'dynamicRouter/:id',
-        name: '動態路徑',
+        name: '動態路由',
         component: () => import('../views/DynamicRouter.vue')
       },
       {
         path: 'dynamicRouterByProps/:id',
-        name: '動態路徑',
+        name: '動態路徑ByProps',
         component: () => import('../views/DynamicRouterByProps.vue'),
         props: (route) => {
           console.log('route', route)
@@ -47,6 +47,11 @@ const routes = [
             id: route.params.id
           }
         }
+      },
+      {
+        path: 'routerNavigation',
+        name: '路由導覽',
+        component: () => import('../views/RouterNavigation.vue')
       },
       {
         path: 'namedView',
